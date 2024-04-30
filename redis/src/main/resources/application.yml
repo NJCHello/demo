@@ -1,0 +1,20 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: redis
+  redis:
+    database: 1
+    host: 127.0.0.1
+    port: 6379
+    password:
+#    ssl:
+#    timeout:
+#    connectTimeout:
+#    clientName:
+#    cluster:
+#      nodes:
+#    sentinel:
+#      master:
+#      nodes:
