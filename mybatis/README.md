@@ -8,3 +8,5 @@
 * [打印SQL](https://github.com/alibaba/druid/wiki/%E9%85%8D%E7%BD%AE_LogFilter)
 # MyBatisCodeHelper-Pro
 * [GitHub](https://github.com/gejun123456/MyBatisCodeHelper-Pro)
+# spring
+* [spring常用配置](https://blog.csdn.net/qq_44027353/article/details/116546160?spm=1001.2014.3001.5502)
