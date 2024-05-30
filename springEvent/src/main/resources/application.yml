@@ -6,3 +6,10 @@ spring:
     active: 'pre'
   application:
     name: springEvent
+
+thread:
+  pool:
+    corePoolSize: 1
+    maxPoolSize: 1
+    keepAliveSeconds: 1
+    queueCapacity: 1

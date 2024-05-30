@@ -1,6 +1,0 @@
-thread:
-  pool:
-    corePoolSize: 50
-    maxPoolSize: 50
-    keepAliveSeconds: 60
-    queueCapacity: 310
