@@ -29,15 +29,21 @@ public class LogStopWatchAspect {
 
     @Around("logStopWatch()")
     public Object around(ProceedingJoinPoint point) throws Throwable {
-        MethodSignature signature = (MethodSignature)point.getSignature();
-        LogStopWatch annotation = signature.getMethod().getAnnotation(LogStopWatch.class);
+        String className = point.getSignature().getDeclaringType().getSimpleName();
+        String methodName = point.getSignature().getName();
+        LogStopWatch annotation = getAnnotation(point);
         StopWatch stopWatch = new StopWatch(annotation.id());
         stopWatch.start(annotation.taskName());
         //切点方法
         Object proceed = point.proceed();
         stopWatch.stop();
-        logStopWatch(stopWatch,point.getSignature().getDeclaringType().getSimpleName(),point.getSignature().getName());
+        logStopWatch(stopWatch, className, methodName);
         return proceed;
+    }
+
+    private LogStopWatch getAnnotation(ProceedingJoinPoint point) {
+        MethodSignature signature = (MethodSignature)point.getSignature();
+        return signature.getMethod().getAnnotation(LogStopWatch.class);
     }
 
     private void logStopWatch(StopWatch stopWatch, String className, String methodName) {
