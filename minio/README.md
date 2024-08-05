@@ -13,3 +13,4 @@
 http://localhost:9080/browser
 ## 账号密码
 minioadmin/minioadmin
+* [K8s部署Minio使用NFS持久化存储](https://blog.csdn.net/weixin_45432833/article/details/135308105)
